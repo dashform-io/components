@@ -2,15 +2,15 @@ import classNames from "classnames";
 import React from "react";
 
 interface ButtonProps {
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
   size?: "small" | "default" | "large";
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+const Button = ({
   variant = "primary",
   size = "default",
   children,
@@ -34,3 +34,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;
