@@ -1,9 +1,10 @@
 import React from "react";
-interface InputProps {
-    placeholder?: string;
-    className?: string;
+import "./Input.scss";
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    variant?: string;
     startIcon?: React.ReactNode;
     endIcon?: React.ReactNode;
+    className?: string;
 }
-declare const Input: ({ placeholder, className, startIcon, endIcon, ...props }: InputProps) => JSX.Element;
+declare const Input: ({ variant, className, startIcon, endIcon, ...props }: InputProps) => JSX.Element;
 export default Input;

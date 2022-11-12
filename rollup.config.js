@@ -4,10 +4,11 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 import json from "@rollup/plugin-json";
 import scss from "rollup-plugin-scss";
+import styles from "rollup-plugin-styles";
+import image from "@rollup/plugin-image";
 
 const packageJson = require("./package.json");
 
@@ -32,17 +33,18 @@ export default [
       commonjs(),
       typescript({
         tsconfig: "./tsconfig.json",
+        exclude: ["**/*.stories.tsx"],
       }),
       json(),
-      postcss(),
       terser(),
-      scss(),
+      styles(),
+      image(),
     ],
   },
   {
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    external: [/\.css$/],
+    external: [/\.scss$/],
     plugins: [dts()],
   },
 ];

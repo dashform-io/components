@@ -1,0 +1,36 @@
+@use '../../variables';
+
+.--input {
+  border-radius: variables.$rounded-md;
+  padding: variables.$padding-md-y 12px;
+  font-weight: 600;
+  color: variables.$black;
+  transition: all ease-in-out 0.15s;
+}
+
+.--input-outline {
+  background-color: variables.$white;
+  border-width: 1px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-radius: variables.$rounded-md;
+}
+
+.--input-outline:hover {
+  border-color: #c1c1c1;
+}
+
+.--input:focus {
+  outline-color: variables.$primary-700;
+  border-color: variables.$primary-700;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+.--input-fill {
+  background-color: variables.$gray-200;
+  border-radius: variables.$rounded-md;
+  padding: variables.$padding-md-y 12px;
+  font-weight: 600;
+  color: variables.$black;
+}

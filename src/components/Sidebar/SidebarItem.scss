@@ -1,0 +1,12 @@
+@use "../../variables";
+
+.--sidebar-item {
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: variables.$gray-100;
+  font-weight: 500;
+}
+
+.--sidebar-item:hover {
+  background-color: variables.$gray-300;
+}

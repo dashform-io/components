@@ -1,0 +1,31 @@
+@use "../../variables";
+
+.--header-h1 {
+  font-size: variables.$font-size-h1;
+  font-weight: 800;
+}
+
+.--header-h2 {
+  font-size: variables.$font-size-h2;
+  font-weight: 800;
+}
+
+.--header-h3 {
+  font-size: variables.$font-size-h3;
+  font-weight: 800;
+}
+
+.--header-h4 {
+  font-size: variables.$font-size-h4;
+  font-weight: 600;
+}
+
+.--header-h5 {
+  font-size: variables.$font-size-h5;
+  font-weight: 600;
+}
+
+.--header-h6 {
+  font-size: variables.$font-size-h6;
+  font-weight: 600;
+}

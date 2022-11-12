@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./index.css";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 
