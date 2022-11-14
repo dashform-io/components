@@ -1,8 +1,8 @@
 import React from "react";
 import "./Button.scss";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    colorScheme?: "primary" | "secondary";
-    variant?: "rounded" | "pill" | "ghost";
+    colorScheme?: "primary" | "secondary" | "ternary";
+    variant?: "rounded" | "pill" | "ghost" | "icon";
     size?: "small" | "default" | "large";
     children?: React.ReactNode;
 }

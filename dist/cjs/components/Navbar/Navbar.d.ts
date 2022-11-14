@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navbar.scss";
 interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
 }

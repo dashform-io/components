@@ -1,0 +1,65 @@
+.--switch-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.--switch-check {
+  display: none;
+  z-index: 10;
+}
+
+.--switch-inner {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.--switch-inner-bg {
+  position: absolute;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(145, 32, 254, 1) 0%,
+    rgba(251, 93, 214, 1) 100%
+  );
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.--switch-inner-knob {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 19px;
+  height: 19px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.--switch-inner-toggled {
+  opacity: 0;
+}
+
+.--switch-check:checked + .--switch-inner-knob {
+  transform: translateX(25px);
+}
+
+.--switch-check:checked + .--switch-inner {
+  opacity: 1;
+}

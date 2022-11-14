@@ -11,7 +11,7 @@
 .--input-outline {
   background-color: variables.$white;
   border-width: 1px;
-  border-color: #e1e1e1;
+  border-color: variables.$border-light;
   border-style: solid;
   border-radius: variables.$rounded-md;
 }

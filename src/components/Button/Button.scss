@@ -53,8 +53,12 @@
   border-color: variables.$primary-900;
 }
 
-.--button-secondary {
-  background-color: variables.$white;
+.--button-ternary {
+  color: black;
+}
+
+.--button-ternary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .--button-pill {
@@ -68,5 +72,16 @@
 
 .--button-ghost:hover {
   background-color: #d1b6ff55;
-  color: variables.$primary-700;
+}
+
+.--button-ghost:hover {
+  background-color: #d1b6ff55;
+}
+
+.--button-icon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  color: variables.$black;
+  padding: 5px;
 }

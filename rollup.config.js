@@ -40,6 +40,7 @@ export default [
       styles(),
       image(),
     ],
+    external: ["react", "react-dom"],
   },
   {
     input: "dist/esm/index.d.ts",

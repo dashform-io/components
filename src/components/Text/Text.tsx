@@ -6,8 +6,8 @@ interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 }
 
 interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  is: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  children: React.ReactNode;
+  is?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  children?: React.ReactNode;
 }
 
 export const Text = ({ children }: TextProps) => {
