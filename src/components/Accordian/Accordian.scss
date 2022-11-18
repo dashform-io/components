@@ -1,0 +1,46 @@
+@use '../../variables.scss';
+
+.--accordian {
+    background-color: #793de110;
+    border-radius: 8px;
+}
+
+.--accordian-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #793de12c;
+    color: variables.$primary-900;
+    padding: 12px 16px;
+    transition: background-color 0.218s;
+    text-align: left;
+}
+
+.--accordian-button:hover {
+    background-color: #793de13c;
+}
+
+.--accordian-content {
+    padding: 12px 16px;
+    //transition: all 0.21s ease;
+    color: variables.$primary-900;
+    border-radius: 8px;
+}
+
+//.--accordian-content-true {
+    //opacity: 1;
+    ////transform: scaleY(1);
+//}
+
+//.--accordian-content-false {
+    //opacity: 0;
+    ////transform: scaleY(0.95);
+    //max-height: 0;
+//}
+
+.ReactCollapse--collapse {
+  transition: height 0.3s;
+}
