@@ -1,7 +1,21 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import "./Accordian.scss";
 import { Collapse } from "react-collapse";
+
+interface AccordianProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+interface AccordianButtonProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+interface AccordianContentProps {
+  children?: React.ReactNode;
+  className?: string;
+}
 
 interface AccordianContextType {
   isOpen: boolean;
@@ -18,7 +32,7 @@ const useAccordian = () => {
   return context;
 };
 
-const Accordian = ({ children }) => {
+const Accordian = ({ children, className }: AccordianProps) => {
   const [openPanel, setOpenPanel] = useState(false);
   const togglePanel = () => {
     setOpenPanel(!openPanel);
@@ -26,28 +40,35 @@ const Accordian = ({ children }) => {
 
   return (
     <AccordianContext.Provider value={{ isOpen: openPanel, togglePanel }}>
-      <div className="--accordian">{children}</div>
+      <div className={`--accordian ${className}`}>{children}</div>
     </AccordianContext.Provider>
   );
 };
 
-const AccordianButton = ({ children }) => {
+const AccordianButton = ({ children, className }: AccordianButtonProps) => {
   const context = useAccordian();
 
   return (
-    <button className="--accordian-button" onClick={context.togglePanel}>
+    <button
+      className={`--accordian-button ${className}`}
+      onClick={context.togglePanel}
+    >
       {children}
-      <FaChevronDown />
+      <span
+        className={`--accordian-chevron --accordian-chevron-${context.isOpen}`}
+      >
+        <FaChevronDown />
+      </span>
     </button>
   );
 };
 
-const AccordianContent = ({ children }) => {
+const AccordianContent = ({ children, className }: AccordianContentProps) => {
   const context = useAccordian();
 
   return (
     <Collapse isOpened={context.isOpen}>
-      <div className={`--accordian-content`}>{children}</div>
+      <div className={`--accordian-content ${className}`}>{children}</div>
     </Collapse>
   );
 };

@@ -11,19 +11,20 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border-radius: 8px;
     //background-color: #793de12c;
     //color: variables.$primary-900;
     color: black;
     padding: 12px 16px;
     transition: background-color 0.218s;
     text-align: left;
+    border-radius: 8px;
     //border: 1px solid #e1e1e1;
-    background-color: #f2f2f2;
+    //background-color: #f2f2f2;
+    background-color: white;
 }
 
 .--accordian-button:hover {
-    background-color: #e1e1e1;
+    background-color: #f2f2f2;
 }
 
 .--accordian-content {
@@ -44,6 +45,18 @@
     ////transform: scaleY(0.95);
     //max-height: 0;
 //}
+
+.--accordian-chevron {
+    transition: transform 0.3s ease;
+}
+
+.--accordian-chevron-true {
+    transform: rotate(180deg);
+}
+
+.--accordian-chevron-false {
+    transform: rotate(0deg);
+}
 
 .ReactCollapse--collapse {
   transition: height 0.3s;

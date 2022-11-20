@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Switch.scss";
 
-const Switch = () => {
+interface SwitchProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+
+const Switch = ({ ...props }: SwitchProps) => {
   const [toggled, setToggled] = useState(false);
 
   const onToggle = () => {
@@ -11,16 +13,13 @@ const Switch = () => {
 
   return (
     <label className="--switch-wrapper">
-      <input
-        type="checkbox"
-        className="--switch-check"
-        checked={toggled}
-        onChange={onToggle}
-      />
+      <input type="checkbox" className="--switch-check" {...props} />
       <span className="--switch-inner-knob" />
       <span className="--switch-inner-bg" />
       <span
-        className={`--switch-inner ${toggled && "--switch-inner-toggled"}`}
+        className={`--switch-inner ${
+          props.checked && "--switch-inner-toggled"
+        }`}
       />
     </label>
   );
