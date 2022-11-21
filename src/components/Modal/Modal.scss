@@ -1,0 +1,35 @@
+.--modal-content {
+    padding: 24px;
+    background-color: white;
+    min-height: 100px;
+    width: 50%;
+    z-index: 1001;
+    border-radius: 8px;
+}
+
+.--modal-overlay {
+    z-index: 1000;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.--modal-false {
+    display: none;
+}
+
+.--modal-true {
+    display: flex;
+}
+
+.--modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

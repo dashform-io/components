@@ -7,4 +7,5 @@ export { default as Banner } from "./Banner/Banner";
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SidebarItem } from "./Sidebar/SidebarItem";
 export { default as Switch } from "./Switch/Switch";
+export { default as Modal } from "./Modal/Modal";
 export * from "./Accordian/Accordian";

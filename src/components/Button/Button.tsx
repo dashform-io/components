@@ -13,7 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * Primary UI component for user interaction
  */
 const Button = ({
-  colorScheme = "primary",
+  colorScheme,
   size = "default",
   variant = "rounded",
   children,

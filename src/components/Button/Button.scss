@@ -29,6 +29,7 @@
 
 .--button:hover {
     transform: scale(1.03);
+      background-color: rgba(0, 0, 0, 0.1);
     
     &.--button-primary:enabled {
       background-color: variables.$primary-800;
@@ -37,6 +38,14 @@
     &.--button-secondary:enabled {
       background-color: variables.$primary-700;
       color: variables.$white;
+    }
+
+    &.--button-ternary:enabled {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &.--button-ghost:enabled {
+      background-color: #d1b6ff55;
     }
 }
 
@@ -68,10 +77,6 @@
   color: black;
 }
 
-.--button-ternary:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
 .--button-pill {
   border-radius: 10000px;
 }
@@ -81,18 +86,11 @@
   color: variables.$primary-700;
 }
 
-.--button-ghost:hover {
-  background-color: #d1b6ff55;
-}
-
-.--button-ghost:hover {
-  background-color: #d1b6ff55;
-}
-
 .--button-icon {
   width: 32px;
   height: 32px;
   background-color: transparent;
   color: variables.$black;
+  font-size: 30px;
   padding: 5px;
 }
