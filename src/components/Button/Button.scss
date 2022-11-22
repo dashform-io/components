@@ -47,6 +47,10 @@
     &.--button-ghost:enabled {
       background-color: #d1b6ff55;
     }
+
+    &.--button-icon:enabled {
+      background-color: #c1c1c155;
+    }
 }
 
 .--button:active {
@@ -60,6 +64,10 @@
       background-color: variables.$primary-900;
       color: variables.$white;
       border-color: variables.$primary-900;
+    }
+
+    &.--button-icon:enabled {
+      background-color: #c1c1c1b0;
     }
 }
 
@@ -90,7 +98,7 @@
   width: 32px;
   height: 32px;
   background-color: transparent;
-  color: variables.$black;
-  font-size: 30px;
+  color: #666666;
+  font-size: 18px;
   padding: 5px;
 }

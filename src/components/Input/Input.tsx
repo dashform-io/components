@@ -23,13 +23,9 @@ const Input = ({
       className={classNames(`--input --input-${variant}`, className)}
       onClick={() => inputRef.current!.focus()}
     >
-      <div className="text-gray-100">{startIcon}</div>
-      <input
-        ref={inputRef}
-        {...props}
-        className="w-96 placeholder:text-gray-100 bg-gray-60 outline-none font-semibold"
-      />
-      <div className="text-gray-100">{endIcon}</div>
+      <span className="--input-icon">{startIcon}</span>
+      <input ref={inputRef} {...props} className="--input-inner" />
+      <span className="--input-icon">{endIcon}</span>
     </div>
     //<input
     //className={classNames(`--input --input-${variant}`, className)}

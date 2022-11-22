@@ -13,7 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * Primary UI component for user interaction
  */
 const Button = ({
-  colorScheme,
+  colorScheme = "primary",
   size = "default",
   variant = "rounded",
   children,
@@ -22,7 +22,13 @@ const Button = ({
   return (
     <button
       type="button"
-      className={`--button --button-${colorScheme} --button-${variant}`}
+      className={classNames(
+        `--button --button-${colorScheme} --button-${variant}`,
+        {
+          [`--button-${colorScheme}`]:
+            variant !== "icon" && variant !== "ghost",
+        }
+      )}
       {...props}
     >
       {children}
