@@ -10,8 +10,8 @@ interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children?: React.ReactNode;
 }
 
-export const Text = ({ children }: TextProps) => {
-  return <p>{children}</p>;
+export const Text = ({ children, ...props }: TextProps) => {
+  return <p {...props}>{children}</p>;
 };
 
 export const Header = ({ is, className, children }: HeaderProps) => {

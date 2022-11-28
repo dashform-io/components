@@ -8,4 +8,6 @@ export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SidebarItem } from "./Sidebar/SidebarItem";
 export { default as Switch } from "./Switch/Switch";
 export { default as Modal } from "./Modal/Modal";
+export { default as Spinner } from "./Spinner/Spinner";
+export * from "./Tabs/Tabs";
 export * from "./Accordian/Accordian";

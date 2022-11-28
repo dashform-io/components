@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React from "react";
+import Spinner from "../Spinner/Spinner";
 import "./Button.scss";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,6 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "rounded" | "pill" | "ghost" | "icon";
   size?: "small" | "default" | "large";
   children?: React.ReactNode;
+  loading?: boolean;
 }
 
 /**
@@ -17,6 +19,7 @@ const Button = ({
   size = "default",
   variant = "rounded",
   children,
+  loading,
   ...props
 }: ButtonProps) => {
   return (
@@ -27,10 +30,12 @@ const Button = ({
         {
           [`--button-${colorScheme}`]:
             variant !== "icon" && variant !== "ghost",
+          "--button-loading": loading,
         }
       )}
       {...props}
     >
+      {loading && <Spinner />}
       {children}
     </button>
   );

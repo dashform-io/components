@@ -15,62 +15,61 @@
 }
 
 .--button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 
-    &:hover {
-        transform: none;
-    }
+  &:hover {
+    transform: none;
+  }
 }
 
 .--button-primary {
-    background-color: variables.$primary-700;
+  background-color: variables.$primary-700;
 }
 
 .--button:hover {
-    transform: scale(1.03);
-      background-color: rgba(0, 0, 0, 0.1);
-    
-    &.--button-primary:enabled {
-      background-color: variables.$primary-800;
-    }
+  transform: scale(1.03);
+  background-color: rgba(0, 0, 0, 0.1);
 
-    &.--button-secondary:enabled {
-      background-color: variables.$primary-700;
-      color: variables.$white;
-    }
+  &.--button-primary:enabled {
+    background-color: variables.$primary-800;
+  }
 
-    &.--button-ternary:enabled {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
+  &.--button-secondary:enabled {
+    background-color: variables.$primary-700;
+    color: variables.$white;
+  }
 
-    &.--button-ghost:enabled {
-      background-color: #d1b6ff55;
-    }
+  &.--button-ternary:enabled {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-    &.--button-icon:enabled {
-      background-color: #c1c1c155;
-    }
+  &.--button-ghost:enabled {
+    background-color: #d1b6ff55;
+  }
+
+  &.--button-icon:enabled {
+    background-color: #c1c1c155;
+  }
 }
 
 .--button:active {
-    transform: scale(0.99);
+  transform: scale(0.99);
 
-    &.--button-primary:enabled {
-      background-color: variables.$primary-900;
-    }
+  &.--button-primary:enabled {
+    background-color: variables.$primary-900;
+  }
 
-    &.--button-secondary:enabled {
-      background-color: variables.$primary-900;
-      color: variables.$white;
-      border-color: variables.$primary-900;
-    }
+  &.--button-secondary:enabled {
+    background-color: variables.$primary-900;
+    color: variables.$white;
+    border-color: variables.$primary-900;
+  }
 
-    &.--button-icon:enabled {
-      background-color: #c1c1c1b0;
-    }
+  &.--button-icon:enabled {
+    background-color: #c1c1c1b0;
+  }
 }
-
 
 .--button-secondary {
   background-color: variables.$white;
@@ -79,7 +78,6 @@
   border-style: solid;
   border-width: 2px;
 }
-
 
 .--button-ternary {
   color: black;
@@ -101,4 +99,10 @@
   color: #666666;
   font-size: 18px;
   padding: 5px;
+}
+
+.--button-loading {
+  position: relative;
+  opacity: 0.5;
+  pointer-events: none;
 }
